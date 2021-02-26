@@ -1,24 +1,19 @@
-import logo from './logo.svg';
+import React  from 'react';
 import './App.css';
+import Home from "./pages/Home";
+import BackgroundVideo from "./pages/_partials/BackgroundVideo";
+import styled from "styled-components";
 
-function App() {
+const App = () => {
+  const Wrapper = styled.div`
+    height: 100vh;
+    background-color: rgba(24,23,18,.9)
+  `;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Wrapper>
+      <BackgroundVideo />
+      <Home />
+    </Wrapper>
   );
 }
 
