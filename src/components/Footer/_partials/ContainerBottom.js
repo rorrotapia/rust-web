@@ -3,27 +3,27 @@ import styled from "styled-components";
 import steamIcon from "./icons/steam-brands.svg"
 import discordIcon from "./icons/discord-brands.svg"
 
-const ContainerBottom = () => {
-  const ContainerBottom = styled.div`
+const ContainerBlock = styled.div`
     margin: auto 0 3rem;
   `;
-  
-  const IconLink = styled.a`
+
+const IconLink = styled.a`
     width: 2rem;
     display:block;
     filter: invert(1);
     margin: 1rem auto;
   `;
-  
+
+const ContainerBottom = () => {
   return (
-    <ContainerBottom>
+    <ContainerBlock>
       <IconLink href="https://discord.gg/e3sMDUgqPH">
-        <img src={discordIcon} />
+        <img src={discordIcon} alt=""/>
       </IconLink>
       <IconLink href="#">
-        <img src={steamIcon}/>
+        <img src={steamIcon} alt=""/>
       </IconLink>
-    </ContainerBottom>
+    </ContainerBlock>
   )
 }
 

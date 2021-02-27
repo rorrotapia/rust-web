@@ -3,18 +3,19 @@ import styled from "styled-components";
 import ContainerTop from "./_partials/ContainerTop";
 import ContainerBottom from "./_partials/ContainerBottom";
 
-
-const Footer = () => {
-  const Footer = styled.div`
+const FooterDiv = styled.div`
+    width:5%;
     display: flex;
     flex-direction: column;
     height:100%
   `;
+
+const Footer = () => {
   return (
-    <Footer>
+    <FooterDiv>
       <ContainerTop />
       <ContainerBottom />
-    </Footer>
+    </FooterDiv>
   )
 }
 

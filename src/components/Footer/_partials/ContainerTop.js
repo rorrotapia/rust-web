@@ -3,27 +3,27 @@ import styled from "styled-components";
 import envelopeIcon from "./icons/envelope-solid.svg";
 import languageIcon from "./icons/language-solid.svg";
 
-const ContainerTop = () => {
-  const ContainerTop = styled.div`
+const ContainerBlock = styled.div`
     margin: 5rem 0 auto;
   `;
-  
-  const IconLink = styled.a`
+
+const IconLink = styled.a`
     width: 2rem;
     display:block;
     filter: invert(1);
     margin: 1rem auto;
   `;
-  
+
+const ContainerTop = () => {
   return (
-    <ContainerTop>
+    <ContainerBlock>
       <IconLink href="#">
-        <img src={envelopeIcon} />
+        <img src={envelopeIcon} alt="" />
       </IconLink>
       <IconLink href="#">
-        <img src={languageIcon} />
+        <img src={languageIcon} alt="" />
       </IconLink>
-    </ContainerTop>
+    </ContainerBlock>
   )
 }
 

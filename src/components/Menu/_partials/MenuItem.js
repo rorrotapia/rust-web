@@ -1,32 +1,42 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import styled from "styled-components";
+import { Link } from "wouter";
 
-const MenuItem = ({ name, active, disabled, url, index }) => {
-  const NavTabItem = styled.li`
+const NavTabItem = styled.li`
     font-family: 'Staatliches';
     font-size: 3rem;
     cursor: pointer;
     color: white;
   `;
-  const NavTabLink = styled.a`
+const NavTabLink = styled.a`
     text-decoration: unset;
     color: white;
   `;
-  
-  const [toggleState, setToggleState] = useState(0)
-  
-  const toggleTab = (index) => {
-    setToggleState(index)
-  }
-  
+
+const MenuItem = ({ name,active, disabled, url, index }) => {
   return (
-    <NavTabItem className={toggleState === index ? "active" : "toto"} onClick={() => toggleTab(index)}>
+    <>
+      <Link href="/">
+        <NavTabItem>Home</NavTabItem>
+      </Link>
+      <NavTabLink href="https://app.gpay.io/store/rustytrombone">
+        <NavTabItem>Store</NavTabItem>
+      </NavTabLink>
+      <Link href="/server">
+        <NavTabItem>Servers</NavTabItem>
+      </Link>
+      <Link href="/stats">
+        <NavTabItem>Stats</NavTabItem>
+      </Link>
+    </>
+    
+    /*<NavTabItem>
       {url
         ? <NavTabLink href={`${url}`}>{name}</NavTabLink>
         : <span>{name}</span>
       }
       {disabled ? `(WIP)` : ``}
-    </NavTabItem>
+    </NavTabItem>*/
   )
 }
 
