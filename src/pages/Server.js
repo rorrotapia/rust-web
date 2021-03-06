@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import Button from "../components/Button/Button";
+import Calendar from "../components/Calendar/Calendar";
 
 const NameServer = styled.div`
   font-size: 5rem;
@@ -63,9 +64,10 @@ const Server = ({ statusServer }) => {
           <PlayersInfo>{statusServer?.players}/{statusServer?.players_max}</PlayersInfo>
         </StatusInfo>
         <ButtonMap>
-          <Button href="https://rustmaps.com/map/3200_1337">Map</Button>
+          <Button href="http://playrust.io/map/?64.42.181.188:49045">Map</Button>
         </ButtonMap>
       </InfoPage>
+      <Calendar />
     </>
   )
 }

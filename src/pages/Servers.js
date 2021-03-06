@@ -41,18 +41,10 @@ const Container = styled.div`
 
 
 const Servers = () => {
- 
-  /*
-  * init state id (default string vide )
-  * creer un composant ItemServer -> 2 props (id,setter du state precedent)
-  *
-  * useEffect -> fetch api grace à l'id, dependence state id
-  * passer resultats via props au composant Server
-  */
-  const [idServer, setIdServer] = useState('')
-  
+  const [idServer, setIdServer] = useState('4824')
   const [statusServer, setStatusServer] = useState(null)
   
+  //Deps = state qui change
   useEffect(() => {
     //IIFE (convention ";" avant)
     if (idServer) {
@@ -69,7 +61,7 @@ const Servers = () => {
         <SidebarTitle>Servers</SidebarTitle>
         <ListServers>
           <ButtonServer idServer={"4824"} serverSetter={setIdServer}>Vanilla x2</ButtonServer>
-          <ButtonServer idServer={"3631"} serverSetter={setIdServer}>Modded x2 - SOON</ButtonServer>
+          {/*<ButtonServer idServer={"3631"} serverSetter={setIdServer}>Modded x2 - SOON</ButtonServer>*/}
         </ListServers>
         <ButtonPlay>
           <Button href={"steam://connect/64.42.181.188:49045"}>Play</Button>

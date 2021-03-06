@@ -25,9 +25,9 @@ const MenuItem = ({ name,active, disabled, url, index }) => {
       <Link href="/server">
         <NavTabItem>Servers</NavTabItem>
       </Link>
-      <Link href="/stats">
+      {/*<Link href="/stats">
         <NavTabItem>Stats</NavTabItem>
-      </Link>
+      </Link>*/}
     </>
     
     /*<NavTabItem>
